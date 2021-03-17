@@ -136,4 +136,8 @@ class TodosController extends Controller
             ->route('todos.index')
             ->with('status','Deleted the selected Todo!');
     }
+
+    public function __construct(){
+        $this->middleware('auth');
+    }
 }
